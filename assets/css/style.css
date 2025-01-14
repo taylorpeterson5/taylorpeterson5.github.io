@@ -23,11 +23,13 @@ h6 {
 }
 
 .preview-container {
-  position: relative;
-  display: inline-block;
-  width: 100%; /* Adjust width as needed */
-  max-width: 300px; /* Optional: restrict maximum width */
-  height: auto;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically */
+  width: 100%;
+  height: auto; /* Ensure it scales properly */
+  text-align: center; /* Center-align the content inside */
+  margin: auto; /* Optional: Ensures it is fully centered */
 }
 
 .preview-container img {

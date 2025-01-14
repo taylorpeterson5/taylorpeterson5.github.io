@@ -22,6 +22,41 @@ h6 {
   color: #1e1e1e;
 }
 
+.preview-container {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* Adjust width as needed */
+  max-width: 300px; /* Optional: restrict maximum width */
+  height: auto;
+}
+
+.preview-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.preview-container .button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.preview-container .button-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+
 a {
   color: #1e1e1e;
   transition: all 0.5s ease-in-out;

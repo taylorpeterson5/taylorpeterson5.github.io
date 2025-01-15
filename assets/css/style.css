@@ -24,7 +24,7 @@ h6 {
 
 /* ======= Headshot Image ======= */
 .about-img img {
-  width: 150px; /* Adjust the size of the headshot */
+  width: 300px; /* Adjust the size of the headshot */
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Makes the image circular */
   margin: 0 auto; /* Centers the image horizontally */

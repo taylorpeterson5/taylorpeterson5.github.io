@@ -93,6 +93,30 @@ hr.line-mf {
   padding: 0 15px; /* Adds default padding for smaller screens */
 }
 
+.award-box {
+  margin: 20px auto; /* Adds space between awards */
+  text-align: center; /* Ensures content is centered */
+}
+
+.award-icon img {
+  width: 100%; /* Responsive image size */
+  max-width: 150px; /* Sets a consistent max size for all images */
+  height: auto; /* Maintains aspect ratio */
+  margin-bottom: 15px; /* Adds spacing below the image */
+}
+
+.award-title {
+  font-size: 1.25rem; /* Slightly larger text for titles */
+  font-weight: bold; /* Makes the title stand out */
+  margin-bottom: 10px; /* Spacing below the title */
+}
+
+.award-description {
+  font-size: 1rem; /* Standard size for descriptions */
+  color: #555; /* Neutral color for readability */
+}
+
+
 
 /* ======= Template ====== */
 

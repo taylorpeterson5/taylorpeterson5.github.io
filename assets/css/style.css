@@ -154,7 +154,7 @@ hr.line-mf {
 }
 
 .zero-g-img {
-  max-width: 240px; /* Sets a maximum width */
+  max-width: 200px; /* Sets a maximum width */
   height: auto; /* Maintains aspect ratio */
   margin: 0 auto; /* Centers the image */
 }

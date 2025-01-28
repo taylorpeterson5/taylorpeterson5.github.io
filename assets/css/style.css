@@ -77,6 +77,20 @@ h6 {
   background-color: rgba(0, 0, 0, 0.9); /* Darkens the button background on hover */
 }
 
+/* ====== Awards Section ======= */
+
+hr.line-mf {
+  border: 0;
+  height: 2px;
+  background-color: #ccc; /* Adjust to match your design */
+  margin: 20px auto;
+  width: 50px; /* Adjust for desired length */
+}
+
+
+
+
+/* ======= Template ====== */
 
 a {
   color: #1e1e1e;

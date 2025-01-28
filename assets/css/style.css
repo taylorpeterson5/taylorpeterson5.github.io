@@ -153,6 +153,13 @@ hr.line-mf {
   text-decoration: underline; /* Adds underline on hover */
 }
 
+.zero-g-img {
+  max-width: 240px; /* Sets a maximum width */
+  height: auto; /* Maintains aspect ratio */
+  margin: 0 auto; /* Centers the image */
+}
+
+
 
 /* ======= Template ====== */
 

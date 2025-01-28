@@ -87,7 +87,11 @@ hr.line-mf {
   width: 50px; /* Adjust for desired length */
 }
 
-
+.awards-mf .container {
+  max-width: 1140px; /* Matches Bootstrap's default container width */
+  margin: 0 auto; /* Centers the container */
+  padding: 0 15px; /* Adds default padding for smaller screens */
+}
 
 
 /* ======= Template ====== */

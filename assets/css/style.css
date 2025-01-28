@@ -94,26 +94,33 @@ hr.line-mf {
 }
 
 .award-box {
-  margin: 20px auto; /* Adds space between awards */
-  text-align: center; /* Ensures content is centered */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  height: 100%; /* Ensures all boxes are the same height */
 }
 
 .award-icon img {
-  width: 100%; /* Responsive image size */
-  max-width: 150px; /* Sets a consistent max size for all images */
-  height: auto; /* Maintains aspect ratio */
-  margin-bottom: 15px; /* Adds spacing below the image */
+  width: auto;
+  max-width: 100%;
+  height: 120px; /* Sets a consistent height for all images */
+  object-fit: contain; /* Maintains aspect ratio without cropping */
+  margin-bottom: 15px; /* Spacing between image and content */
 }
 
 .award-title {
-  font-size: 1.25rem; /* Slightly larger text for titles */
-  font-weight: bold; /* Makes the title stand out */
+  font-size: 1.25rem;
+  font-weight: bold;
   margin-bottom: 10px; /* Spacing below the title */
 }
 
 .award-description {
-  font-size: 1rem; /* Standard size for descriptions */
-  color: #555; /* Neutral color for readability */
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0 10px; /* Adds some padding for better readability */
 }
 
 

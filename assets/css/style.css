@@ -160,7 +160,7 @@ hr.line-mf {
 }
 
 .zero-g-img-second {
-  max-width: 360px; /* Adjust to desired size for the second image */
+  max-width: 400px; /* Adjust to desired size for the second image */
   height: auto; /* Maintain aspect ratio */
   margin: 0 auto;
 }

@@ -166,7 +166,12 @@ hr.line-mf {
 }
 
 .nasa-img {
-  max-width: 150px; /* Adjust image size */
+  max-width: 300px; /* Adjust image size */
+  height: auto;
+}
+
+.bop-img {
+  max-width: 300px; /* Adjust image size */
   height: auto;
 }
 

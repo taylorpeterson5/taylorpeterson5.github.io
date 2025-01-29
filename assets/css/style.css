@@ -165,6 +165,11 @@ hr.line-mf {
   margin: 0 auto;
 }
 
+.nasa-img {
+  max-width: 200px; /* Adjust image size */
+  height: auto;
+}
+
 
 
 /* ======= Template ====== */

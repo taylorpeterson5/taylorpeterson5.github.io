@@ -160,13 +160,13 @@ hr.line-mf {
 }
 
 .zero-g-img-second {
-  max-width: 500px; /* Adjust to desired size for the second image */
+  max-width: 450px; /* Adjust to desired size for the second image */
   height: auto; /* Maintain aspect ratio */
   margin: 0 auto;
 }
 
 .nasa-img {
-  max-width: 300px; /* Adjust image size */
+  max-width: 350px; /* Adjust image size */
   height: auto;
 }
 
@@ -176,14 +176,19 @@ hr.line-mf {
 }
 
 .proto-img {
-  max-width: 300px;
+  max-width: 400px;
   height: auto;
 }
 
 .proto-badge {
-  max-width: 200px;
+  max-width: 300px;
   height: auto;
   margin-top: 10px;
+}
+
+.masc-img {
+  max-width: 300px;
+  height: auto;
 }
 
 

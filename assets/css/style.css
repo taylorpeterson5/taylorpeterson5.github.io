@@ -160,7 +160,7 @@ hr.line-mf {
 }
 
 .zero-g-img-second {
-  max-width: 400px; /* Adjust to desired size for the second image */
+  max-width: 500px; /* Adjust to desired size for the second image */
   height: auto; /* Maintain aspect ratio */
   margin: 0 auto;
 }
@@ -171,7 +171,7 @@ hr.line-mf {
 }
 
 .bop-img {
-  max-width: 300px; /* Adjust image size */
+  max-width: 400px; /* Adjust image size */
   height: auto;
 }
 

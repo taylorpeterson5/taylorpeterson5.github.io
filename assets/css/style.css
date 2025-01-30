@@ -175,6 +175,17 @@ hr.line-mf {
   height: auto;
 }
 
+.proto-img {
+  max-width: 300px;
+  height: auto;
+}
+
+.proto-badge {
+  max-width: 200px;
+  height: auto;
+  margin-top: 10px;
+}
+
 
 
 /* ======= Template ====== */

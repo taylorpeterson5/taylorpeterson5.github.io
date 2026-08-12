@@ -34,6 +34,7 @@ h6,
   border-radius: 50%; /* Makes the image circular */
   margin: 0 auto; /* Centers the image horizontally */
   display: block; /* Ensures proper centering */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); /* Depth so the photo doesn't float flat on the page */
 }
 
 .about-img {

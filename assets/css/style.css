@@ -334,6 +334,21 @@ a:hover {
   font-weight: 600;
   color: #1e1e1e;
   font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #8a8a8a;
+  margin-bottom: 0;
+}
+
+.education-entry {
+  margin-bottom: 1.25rem;
+}
+
+.education-entry:last-child {
+  margin-bottom: 0;
 }
 
 /*--/ Title A /--*/

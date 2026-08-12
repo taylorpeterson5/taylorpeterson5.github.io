@@ -108,6 +108,18 @@ hr.line-mf {
   height: 100%; /* Ensures all boxes are the same height */
 }
 
+.award-group-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1e1e1e;
+  margin-bottom: 2rem;
+}
+
+.award-group + .award-group {
+  margin-top: 3rem;
+}
+
 .award-icon img {
   width: auto;
   max-width: 100%;

@@ -47,12 +47,6 @@
     }, 1000);
   });
 
-  /*--/ Star Counter /--*/
-  $('.counter').counterUp({
-    delay: 15,
-    time: 2000
-  });
-
   /*--/ Star Scrolling nav /--*/
   var mainNav_height = $('#mainNav').outerHeight() - 22;
   $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function() {
@@ -124,33 +118,5 @@
       backSpeed: 30
     });
   }
-
-  /*--/ Testimonials owl /--*/
-  $('#testimonial-mf').owlCarousel({
-    margin: 20,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1,
-      }
-    }
-  });
-
-  // Portfolio details carousel
-  $(".portfolio-details-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
-
-  // Initiate venobox (lightbox feature used in portofilo)
-  $(document).ready(function() {
-    $('.venobox').venobox({
-      'share': false
-    });
-  });
 
 })(jQuery);

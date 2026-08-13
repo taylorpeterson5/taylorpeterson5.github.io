@@ -1590,3 +1590,109 @@ footer .credits {
 footer .credits a {
   color: #fff;
 }
+
+/*--------------------------------------------------------------
+# Theme Toggle Button
+--------------------------------------------------------------*/
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.15rem;
+  padding: 0;
+  line-height: 1;
+}
+
+.theme-toggle-btn:focus {
+  outline: none;
+}
+
+/*--------------------------------------------------------------
+# Dark Mode
+--------------------------------------------------------------*/
+[data-theme="dark"] body {
+  background-color: #121212;
+  color: #c9c9c9;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #f2f2f2;
+}
+
+[data-theme="dark"] a {
+  color: #e6e6e6;
+}
+
+[data-theme="dark"] a:hover {
+  color: #c48fdc;
+}
+
+[data-theme="dark"] hr {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] hr.line-mf {
+  background-color: #444;
+}
+
+[data-theme="dark"] .box-shadow-full {
+  background-color: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4), 0 2px 10px 0 rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="dark"] .title-s,
+[data-theme="dark"] .award-group-title,
+[data-theme="dark"] .experience-subtitle,
+[data-theme="dark"] .experience-title {
+  color: #f2f2f2;
+}
+
+[data-theme="dark"] .subtitle,
+[data-theme="dark"] .subtitle-a,
+[data-theme="dark"] .award-description,
+[data-theme="dark"] .experience-institution,
+[data-theme="dark"] .experience-detail,
+[data-theme="dark"] .photo-credit {
+  color: #a8a8a8;
+}
+
+[data-theme="dark"] .btn-link {
+  color: #4da3ff;
+}
+
+[data-theme="dark"] .navbar-b.navbar-reduce {
+  background-color: #161616;
+  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .navbar-b.navbar-reduce .nav-link,
+[data-theme="dark"] .navbar-b.navbar-reduce .nav-link:hover,
+[data-theme="dark"] .navbar-b.navbar-reduce .show > .nav-link,
+[data-theme="dark"] .navbar-b.navbar-reduce .active > .nav-link,
+[data-theme="dark"] .navbar-b.navbar-reduce .nav-link.show,
+[data-theme="dark"] .navbar-b.navbar-reduce .nav-link.active,
+[data-theme="dark"] .navbar-b.navbar-reduce .navbar-brand {
+  color: #c48fdc;
+}
+
+[data-theme="dark"] .navbar-b.navbar-reduce .nav-link:before {
+  background-color: #c48fdc;
+}
+
+[data-theme="dark"] .navbar-b.navbar-reduce .navbar-toggler span {
+  background-color: #e6e6e6;
+}
+
+[data-theme="dark"] .award-icon img,
+[data-theme="dark"] .nasa-img,
+[data-theme="dark"] .zero-g-img-first {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px;
+}

@@ -42,46 +42,87 @@ h6,
   margin-bottom: 20px; /* Adds spacing below the headshot */
 }
 
-/* ======= Resume Preview ======= */
-.resume-preview {
-  text-align: center; /* Centers the resume preview section */
-  margin-top: 20px; /* Adds spacing above the resume section */
+/* ======= Document Preview (thumbnail + centered button + caption band) ======= */
+.doc-preview-group {
+  text-align: center; /* Centers the preview card */
+  margin-top: 20px; /* Adds spacing above the card */
 }
 
-.preview-container {
-  position: relative; /* Enables overlay positioning */
-  display: inline-block; /* Keeps the container inline and centered */
-  width: 300px; /* Fixed width for the resume preview */
+.doc-preview {
+  display: inline-block;
+  width: 300px; /* Fixed width for the preview card */
   max-width: 100%; /* Prevents overflow on narrow screens */
-  height: auto; /* Maintain aspect ratio */
-  margin: 0 auto; /* Centers the container */
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden; /* Clips the thumbnail + caption to rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.preview-container img {
-  width: 100%; /* Ensures the image fits the container */
-  height: auto; /* Keeps the aspect ratio */
-  border-radius: 8px; /* Rounds corners of the preview image */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+.doc-preview:hover,
+.doc-preview:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
 }
 
-/* ======= Button Overlay ======= */
-.button-overlay {
-  position: absolute; /* Positions the button over the image */
-  top: 50%; /* Vertically centers the button */
-  left: 50%; /* Horizontally centers the button */
-  transform: translate(-50%, -50%); /* Ensures perfect centering */
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  color: white; /* Button text color */
-  padding: 10px 20px; /* Adds spacing inside the button */
-  border-radius: 5px; /* Rounds the button corners */
-  font-size: 16px; /* Button text size */
-  text-align: center; /* Centers text inside the button */
-  cursor: pointer; /* Changes cursor to pointer on hover */
-  text-decoration: none; /* Removes underline from text */
+.doc-preview--sm {
+  width: 220px; /* Smaller variant for tighter layouts, e.g. inside an experience card */
 }
 
-.button-overlay:hover {
-  background-color: rgba(0, 0, 0, 0.9); /* Darkens the button background on hover */
+.doc-preview-thumb {
+  position: relative;
+  background-color: #fff;
+}
+
+.doc-preview-thumb img {
+  width: 100%;
+  height: auto; /* Shows the full image at its natural aspect ratio, uncropped */
+  display: block;
+}
+
+.doc-preview-btn {
+  position: absolute; /* Straddles the image and the caption band, layered above both */
+  z-index: 3;
+  left: 50%;
+  bottom: 34px;
+  transform: translateX(-50%);
+  background-color: #8E44AD;
+  color: #fff;
+  padding: 9px 20px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.doc-preview-caption {
+  position: absolute; /* Overlays the bottom of the thumbnail, fully contained within it */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #222;
+  text-align: center;
+  padding: 14px 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  transition: background-color 0.2s ease;
+}
+
+.doc-preview:hover .doc-preview-caption {
+  background-color: #fff;
+}
+
+.doc-preview-caption--tall {
+  padding: 15px 12px 21px;
+  font-size: 1rem;
+}
+
+.doc-preview-btn--tall {
+  bottom: 46px;
 }
 
 /* ====== Awards Section ======= */
@@ -191,6 +232,11 @@ hr.line-mf {
 
 .nasa-img {
   max-width: 350px; /* Adjust image size */
+  height: auto;
+}
+
+.blue-origin-img {
+  max-width: 260px;
   height: auto;
 }
 
@@ -1680,6 +1726,16 @@ footer .credits a {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4), 0 2px 10px 0 rgba(0, 0, 0, 0.55);
 }
 
+[data-theme="dark"] .doc-preview-caption {
+  background-color: rgba(42, 42, 42, 0.75);
+  color: #f2f2f2;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .doc-preview:hover .doc-preview-caption {
+  background-color: #2a2a2a;
+}
+
 [data-theme="dark"] .title-s,
 [data-theme="dark"] .award-group-title,
 [data-theme="dark"] .experience-subtitle,
@@ -1724,10 +1780,17 @@ footer .credits a {
   background-color: #e6e6e6;
 }
 
-[data-theme="dark"] .award-icon img,
-[data-theme="dark"] .nasa-img,
-[data-theme="dark"] .zero-g-img-first {
-  background-color: #f5f5f5;
+/* Logos that are solid black ink on a transparent background go invisible
+   on the dark card, so invert them to white instead of boxing them. */
+[data-theme="dark"] .invert-dark {
+  filter: invert(1);
+}
+
+/* Logos baked onto an opaque canvas (JPEG, or multi-color art designed for
+   a white card) can't show the dark background through CSS alone, so they
+   keep a light backing instead of looking broken. */
+[data-theme="dark"] .flat-bg-logo {
+  background-color: #e9e9e9;
   border-radius: 8px;
   padding: 10px;
 }

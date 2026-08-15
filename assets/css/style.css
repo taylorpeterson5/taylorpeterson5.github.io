@@ -219,7 +219,7 @@ hr.line-mf {
 }
 
 .zero-g-img-first {
-  max-width: 210px; /* Sets a maximum width */
+  max-width: 135px; /* Sets a maximum width */
   height: auto; /* Maintains aspect ratio */
   margin: 0 auto; /* Centers the image */
 }

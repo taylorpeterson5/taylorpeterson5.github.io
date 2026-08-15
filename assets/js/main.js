@@ -36,7 +36,7 @@
   $('.back-to-top').click(function() {
     $('html, body').animate({
       scrollTop: 0
-    }, 1500, 'easeInOutExpo');
+    }, 600, 'easeInOutExpo');
     return false;
   });
 
@@ -44,7 +44,7 @@
   $('.scrolltop-mf').on("click", function() {
     $('html, body').animate({
       scrollTop: 0
-    }, 1000);
+    }, 500);
   });
 
   /*--/ Star Scrolling nav /--*/
@@ -57,7 +57,7 @@
         var scrollto = target.offset().top - mainNav_height;
         $('html, body').animate({
           scrollTop: scrollto
-        }, 1000, "easeInOutExpo");
+        }, 500, "easeInOutExpo");
         return false;
       }
     }
@@ -70,7 +70,7 @@
       var scrollto_initial = $(initial_nav).offset().top - mainNav_height;
       $('html, body').animate({
         scrollTop: scrollto_initial
-      }, 1000, "easeInOutExpo");
+      }, 500, "easeInOutExpo");
     }
   }
 

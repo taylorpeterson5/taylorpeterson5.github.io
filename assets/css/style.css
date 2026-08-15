@@ -316,6 +316,75 @@ hr.line-mf {
   margin-bottom: 1rem;
 }
 
+/* ====== Skills Section ====== */
+
+.skill-accordion-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.skill-accordion-item:last-child {
+  border-bottom: none;
+}
+
+.skill-accordion-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px 4px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.skill-accordion-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background-color: #8E44AD;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.skill-accordion-title {
+  flex: 1;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.skill-accordion-chevron {
+  color: #8E44AD;
+  transition: transform 0.2s ease;
+}
+
+.skill-accordion-header.collapsed .skill-accordion-chevron {
+  transform: rotate(-90deg);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px 4px 18px 61px;
+}
+
+.skill-tag {
+  display: inline-block;
+  background-color: rgba(142, 68, 173, 0.1);
+  color: #8E44AD;
+  border: 1px solid rgba(142, 68, 173, 0.3);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 
 
 /* ======= Template ====== */
@@ -1806,6 +1875,14 @@ footer .credits a {
 
 [data-theme="dark"] .doc-preview:hover .doc-preview-caption {
   background-color: #2a2a2a;
+}
+
+[data-theme="dark"] .skill-accordion-item {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .skill-accordion-title {
+  color: #f2f2f2;
 }
 
 [data-theme="dark"] .title-s,

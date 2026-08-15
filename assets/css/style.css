@@ -240,6 +240,16 @@ hr.line-mf {
   height: auto;
 }
 
+.ns-capsule-img {
+  max-width: 400px;
+  height: auto;
+}
+
+.blue-origin-img-small {
+  max-width: 160px;
+  height: auto;
+}
+
 .bop-img {
   max-width: 400px; /* Adjust image size */
   height: auto;

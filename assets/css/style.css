@@ -1671,10 +1671,12 @@ footer {
 
 footer .copyright {
   margin-bottom: .3rem;
+  font-size: 0.8rem;
 }
 
 footer .credits {
   margin-bottom: 0;
+  font-size: 0.8rem;
 }
 
 footer .credits a {

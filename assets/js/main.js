@@ -119,4 +119,65 @@
     });
   }
 
+  /*--/ Contact Form (AJAX, no page redirect) /--*/
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    var loadingEl = contactForm.querySelector('.loading');
+    var errorEl = contactForm.querySelector('.error-message');
+    var sentEl = contactForm.querySelector('.sent-message');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      loadingEl.style.display = 'block';
+      errorEl.style.display = 'none';
+      sentEl.style.display = 'none';
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        loadingEl.style.display = 'none';
+        if (response.ok) {
+          sentEl.style.display = 'block';
+          contactForm.reset();
+        } else {
+          response.json().then(function(data) {
+            var message = (data && data.errors && data.errors.map(function(err) { return err.message; }).join(', ')) || 'Something went wrong. Please try again.';
+            errorEl.textContent = message;
+            errorEl.style.display = 'block';
+          }).catch(function() {
+            errorEl.textContent = 'Something went wrong. Please try again.';
+            errorEl.style.display = 'block';
+          });
+        }
+      }).catch(function() {
+        loadingEl.style.display = 'none';
+        errorEl.textContent = 'Something went wrong. Please check your connection and try again.';
+        errorEl.style.display = 'block';
+      });
+    });
+  }
+
+  /*--/ Scroll Reveal /--*/
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var revealObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el) {
+      revealObserver.observe(el);
+    });
+  } else {
+    revealEls.forEach(function(el) {
+      el.classList.add('is-visible');
+    });
+  }
+
 })(jQuery);

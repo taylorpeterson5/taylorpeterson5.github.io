@@ -316,6 +316,27 @@ hr.line-mf {
   margin-bottom: 1rem;
 }
 
+/* ====== Scroll Reveal ====== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* ====== Skills Section ====== */
 
 .skill-accordion-item {
@@ -1470,6 +1491,18 @@ a:hover {
 
 .contact-mf {
   margin-top: 4rem;
+}
+
+.contact-info-inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 30px;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.contact-info-inline li a {
+  color: inherit;
 }
 
 @media (min-width: 767px) {

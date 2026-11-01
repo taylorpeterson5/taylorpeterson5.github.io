@@ -1,0 +1,52 @@
+name: Site checks
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 14 * * 1" # Mondays: catches outside links that break on their own
+  workflow_dispatch: # Adds a "Run workflow" button on the Actions tab
+
+permissions:
+  contents: read
+
+jobs:
+  html:
+    name: Validate HTML
+    # Markup only changes on push, so skip this on the weekly link run.
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Download the W3C HTML validator
+        run: curl -sSfL -o "$RUNNER_TEMP/vnu.jar" https://github.com/validator/validator/releases/download/latest/vnu.jar
+
+      - name: Validate every page
+        run: java -jar "$RUNNER_TEMP/vnu.jar" --errors-only --skip-non-html .
+
+  links:
+    name: Check links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # LinkedIn blocks automated checkers (status 999) and Formspree only accepts
+      # form submissions (405 on a normal visit), so neither can be checked.
+      # 403/429 are allowed because some university sites block GitHub's servers;
+      # real breakage still fails (404, missing files, dead domains).
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          fail: true
+          args: >-
+            --no-progress
+            --root-dir "${{ github.workspace }}"
+            --exclude 'linkedin\.com'
+            --exclude 'formspree\.io'
+            --accept '200..=299,403,429'
+            './**/*.html'

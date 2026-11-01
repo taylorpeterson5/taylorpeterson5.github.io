@@ -142,6 +142,23 @@ h6,
   bottom: 46px;
 }
 
+/* ======= Experience video (under an experience card's text) ======= */
+.experience-video {
+  margin: 1rem 0 0;
+}
+
+.experience-video video {
+  display: block;
+  width: 100%;
+  height: auto; /* The width/height attributes keep the 16:9 space reserved before it loads */
+  border-radius: 0.25rem;
+  background-color: #000;
+}
+
+.experience-video figcaption {
+  margin-top: 0.5rem;
+}
+
 /* ======= Embedded PDFs (resume and paper pages) ======= */
 .pdf-frame {
   width: 100%;

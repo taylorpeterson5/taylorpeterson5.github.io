@@ -25,7 +25,7 @@
     '.title-a', '.title-left', '.subtitle-a', '.line-mf', '.section-line',
     '.about-img', '.education-entry', '.about-me .lead', '.doc-preview',
     '.experience-title', '.experience-subtitle', '.experience-institution', '.experience-detail',
-    '.photo-credit', '.box-shadow-full .text-center > img', '.btn-link',
+    '.photo-credit', '.box-shadow-full .text-center > img', '.btn-link', '.experience-video',
     '.award-group-title', '.award-box',
     '.featured-box',
     '.skill-accordion-header', '.skill-tag',

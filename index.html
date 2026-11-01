@@ -46,8 +46,8 @@
   </script>
 
   <!-- Favicons -->
-  <link href="assets/img/Website Icon.jpg" rel="icon">
-  <link href="assets/img/Website Icon.jpg" rel="apple-touch-icon">
+  <link href="assets/img/website_icon.jpg" rel="icon">
+  <link href="assets/img/website_icon.jpg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,8 +56,6 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -112,7 +110,8 @@
           </li>
           <li class="nav-item">
             <button class="theme-toggle-btn nav-link" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
-              <i class="fa fa-moon-o" aria-hidden="true"></i>
+              <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
             </button>
           </li>
         </ul>
@@ -133,11 +132,35 @@
         </div>
       </div>
     </div>
-    <p class="intro-cta"><a class="btn btn-primary btn js-scroll px-4" href="#aboutme" role="button">Learn More</a></p>
-    <a href="#aboutme" class="intro-scroll-down js-scroll" aria-label="Scroll down"><i class="fa fa-chevron-down"></i></a>
+    <p class="intro-cta"><a class="btn btn-primary btn js-scroll px-4" href="#highlights" role="button">Learn More</a></p>
+    <a href="#highlights" class="intro-scroll-down js-scroll" aria-label="Scroll down"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
   </div><!-- End Intro Section -->
 
   <main id="main">
+
+    <!-- ======= Highlights Strip ======= -->
+    <div id="highlights" class="stats-strip">
+      <div class="container">
+        <ul class="stats-list" aria-label="Highlights">
+          <li class="stat">
+            <span class="stat-value"><span aria-hidden="true">~</span><span class="sr-only">About </span>30</span>
+            <span class="stat-label">Parabolic flights</span>
+          </li>
+          <li class="stat">
+            <span class="stat-value">5</span>
+            <span class="stat-label">New Shepard payload flights</span>
+          </li>
+          <li class="stat">
+            <span class="stat-value">2</span>
+            <span class="stat-label">New Glenn launches on console</span>
+          </li>
+          <li class="stat">
+            <span class="stat-value">NSF</span>
+            <span class="stat-label">Graduate Research Fellow</span>
+          </li>
+        </ul>
+      </div>
+    </div><!-- End Highlights Strip -->
 
     <!-- ======= About Section ======= -->
     <section id="aboutme" class="about-mf sect-pt4 route reveal">
@@ -176,7 +199,7 @@
                       <h2 class="title-left">About Me</h2>
                     </div>
                     <p class="lead">
-                      I am an Aerospace Engineering PhD student with a Master's in Aerospace Engineering and Bachelor's in Physics.
+                      I am an Aerospace Engineering PhD student with a Master's in Aerospace Engineering and a Bachelor's in Physics.
                       Since my first year as an undergraduate, I have conducted research in fluid dynamics in microgravity, building and testing payloads
                       for parabolic flight campaigns and Blue Origin New Shepard launches.
                     </p>
@@ -247,7 +270,7 @@
                 <div class="col-md-6">
                   <h3 class="experience-title">New Glenn First Stage (GS1)</h3>
                   <hr class="section-line">
-                  <p class="experience-subtitle"><strong>7/2025 - Present</strong></p>
+                  <p class="experience-subtitle"><strong>7/2025–Present</strong></p>
                   <p class="experience-detail">
                     I develop and maintain thermal and fluids models in <strong>ANSYS Thermal Desktop</strong> for the first and second generation of
                     GS1, New Glenn's first stage. These models provide critical data to other teams supporting design and performance analysis across
@@ -258,7 +281,7 @@
                     significant contributions to the program.
                   </p>
                   <p class="experience-detail">
-                    I also provide console support for launches, including conducting post mission data reviews, and work closely with other
+                    I also provide console support for launches, including conducting post-mission data reviews, and work closely with other
                     disciplines, including the BE-4 engines team, to help ensure mission success. I was on console for the <strong>NG-2</strong>
                     launch as a trainee, which achieved New Glenn's first successful booster landing, and for the <strong>NG-3</strong> launch
                     and booster landing as the GS1 fluids analyst.
@@ -288,9 +311,9 @@
                 <div class="col-md-6">
                   <h3 class="experience-title">In-Space Cryogenic Propellant Transfer Operations, Data Analysis, and Modeling</h3>
                   <hr class="section-line">
-                  <p class="experience-subtitle"><strong>8/2024 - 5/2025</strong></p>
+                  <p class="experience-subtitle"><strong>8/2024–5/2025</strong></p>
                   <p class="experience-detail">
-                    During this internship, I contributed to research focusing on CFD simulations of cryogenics chilldown processes for
+                    During this internship, I contributed to research focusing on CFD simulations of cryogenic chilldown processes for
                     in-space refueling applications.
                   </p>
                   <p class="experience-detail">
@@ -324,7 +347,7 @@
                   <hr class="section-line">
                   <p class="experience-subtitle"><strong>Contractor</strong></p>
                   <div class="text-center">
-                    <img src="assets/img/ZeroG (1).png" class="img-fluid rounded b-shadow-a mb-3 zero-g-img-first" alt="Zero-G Logo" loading="lazy">
+                    <img src="assets/img/zerog.png" class="img-fluid rounded b-shadow-a mb-3 zero-g-img-first" alt="Zero-G Logo" loading="lazy">
                   </div>
                 </div>
 
@@ -332,21 +355,21 @@
                 <div class="col-md-6">
                   <h3 class="experience-title">Zero Gravity Corporation</h3>
                   <hr class="section-line">
-                  <p class="experience-subtitle"><strong>7/2021 - Present</strong></p>
+                  <p class="experience-subtitle"><strong>7/2021–Present</strong></p>
                   <p class="experience-detail">
-                     I have been flying with the Zero Gravity Corporation (Zero-G) since 2018, completing approximately 30 flights to date.
-                    As of the summer of 2021, I was hired as a flight coach. For research flights, my role includes being part of the staff
+                     I have been flying with the Zero Gravity Corporation (Zero-G) since 2018 and have completed approximately 30 flights.
+                    In the summer of 2021, I was hired as a flight coach. For research flights, my role includes being part of the staff
                     team that conducts Team Readiness Reviews (TRRs) on each experiment that flies with us. This includes ensuring the payload
                     is safe to fly: no loose objects, no sharp corners, and no dangerous liquids/components are being brought onto the aircraft.
                   </p>
                   <p class="experience-detail">
-                     During flight, my job is to ensure that passengers are being safe and to assist if anyone is feeling unwell.
+                     During flight, my job is to keep passengers safe and to assist anyone who is feeling unwell.
                     For commercial flights, I have the same responsibilities in flight. My 'on the ground' role (for both research
                     and commercial) consists of preparing the passengers for what to expect during flight.
                   </p>
                   <p class="experience-detail">
                      Before becoming a flight coach, I flew on a handful of research campaigns for various payloads. Having gone through the 
-                     TRR and flight process as a customer first has given me a unique experience, and the knowledge of how to best 
+                     TRR and flight process as a customer first has given me a unique perspective and the knowledge of how to best
                      assist customers.
                   </p>
                   </div>
@@ -376,13 +399,13 @@
                   <hr class="section-line">
                   <p class="experience-subtitle"><strong>6/2024–8/2024</strong></p>
                   <p class="experience-detail">
-                    During the summer of 2024, I worked on a project simulating cryogenic flows through tesla valves. The goal
-                    of the project was to test various tesla valve designs with cryogenics via CFD and analyze pressure drops in bidirectional flow.
+                    During the summer of 2024, I worked on a project simulating cryogenic flows through Tesla valves. The goal
+                    of the project was to test various Tesla valve designs with cryogenics via CFD and analyze pressure drops in bidirectional flow.
                   </p>
                   <p class="experience-detail">
                     I developed a series of CFD simulations using <strong>Star-CCM+</strong>, generating a dataset to quantify the pressure
                     drop characteristics across varying flow conditions. My results for the baseline design matched published literature
-                    values, validating the simulation approach for the remaining tesla valve designs tested.
+                    values, validating the simulation approach for the remaining Tesla valve designs tested.
                   </p>
                   </div>
                 
@@ -405,7 +428,7 @@
                   <p class="experience-subtitle"><strong>University of Central Florida (UCF)</strong></p>
                   <p class="experience-institution">Dr. Michael Kinzel's Computational Fluids and Aerodynamics Lab (CFAL)</p>
                   <p class="experience-detail">
-                    This work was funded by NASA's Techflight opportunity under award #80NSSC21K0338.
+                    This work was funded by NASA's TechFlight opportunity under award #80NSSC21K0338.
                   </p>
                     <a href="asme_paper.html" class="btn btn-link">Read my ASME research paper presented at the Fluids Engineering Division Summer Meeting 2022.</a>
                     <div class="doc-preview-group mt-3">
@@ -421,24 +444,24 @@
 
                 <!-- Right Column-->
                 <div class="col-md-6">
-                  <h3 class="experience-title">Lens Free Imaging (LFI) Techflight</h3>
+                  <h3 class="experience-title">Lens Free Imaging (LFI) TechFlight</h3>
                   <hr class="section-line">
                   <p class="experience-subtitle"><strong>9/2021–8/2024</strong></p>
                   <p class="experience-detail">
-                      In collaboration with imec USA, UCF is researching osteoporosis in astronauts in low-gravity environments. 
+                      In collaboration with imec USA, UCF researched osteoporosis in astronauts in low-gravity environments.
                     I utilized <strong>Star-CCM+</strong> to create Computational Fluid Dynamics (CFD) simulations of microfluidics in microgravity, focusing on fluid instabilities 
                     and their role in bone loss. </p>
                   <p class="experience-detail">
                      I also conducted lab experiments to verify the CFD simulations, demonstrating fluid behaviors in both normal and low gravity. This included
-                    creating CAD models with <strong>Autodesk Inventor</strong> of microfluidic devices, 3D printing a mold for variations of the device using 
-                    and Anycubic resin printer, and fully fabricating these devices. The experiments required precise and careful procedures to be successful.
+                    creating CAD models of microfluidic devices in <strong>Autodesk Inventor</strong>, 3D printing a mold for variations of the device using
+                    an Anycubic resin printer, and fully fabricating these devices. The experiments required precise and careful procedures to be successful.
                   </p>
                   <p class="experience-detail">
                     Throughout this project, I mentored 5 undergraduate students to assist with experiments. I utilized <strong>Trello</strong> to assign tasks
                     and keep important documents and meeting presentations organized.
                   </p>
                   <p class="experience-detail">
-                    This experiment has seen flight on Blue Origin's New Shepard Vehicle in 2023 (NS-24). </p>
+                    This experiment flew aboard Blue Origin's New Shepard vehicle in December 2023 (NS-24).</p>
                   </div>
              
                 </div>
@@ -476,8 +499,8 @@
                   <p class="experience-subtitle"><strong>6/2020–8/2020 & 6/2021–8/2021</strong></p>
                   <p class="experience-detail">
                     I was selected for an internship at NASA Kennedy Space Center’s Advanced Engineering Development Branch
-                    during the summers of 2020 and 2021. My role involved designing, building, and testing a payload that is anticipating flight aboard 
-                    a SpaceX Dragon Capsule for testing on the International Space Station (ISS).
+                    during the summers of 2020 and 2021. My role involved designing, building, and testing a payload intended to fly aboard
+                    a SpaceX Dragon capsule for testing on the International Space Station (ISS).
                   </p>
                   <p class="experience-detail">
                      During these 10-week internships, I collaborated with a team of engineers to develop and construct 
@@ -505,7 +528,7 @@
                 <!-- Left Column -->
                 <div class="col-md-6">
                   <div class="text-center">
-                    <img src="assets/img/blueorigin-launch.jpg" class="img-fluid rounded b-shadow-a mb-1 bop-img" alt="My Team and I in front of the New Shepard Capsule after launch" loading="lazy">
+                    <img src="assets/img/blueorigin-launch.jpg" class="img-fluid rounded b-shadow-a mb-1 bop-img" alt="My team and me in front of the New Shepard capsule after launch" loading="lazy">
                   </div>
                   <p class="photo-credit text-center">Photo courtesy of Blue Origin</p>
                   <h3 class="experience-title">Mission Team Lead, Data Acquisition & Analyst Lead, Lead Mechanical Engineer</h3>
@@ -540,12 +563,12 @@
                     suborbital missions aboard Blue Origin’s New Shepard vehicle in January and December 2019.
                   </p>
                   <p class="experience-detail">
-                    I joined MPG-BOP in my freshman year as a mechanical team member, focusing on using <strong>SolidWorks</strong>, to update
+                    I joined MPG-BOP in my freshman year as a mechanical team member, focusing on using <strong>SolidWorks</strong> to update
                     the payload design and making the same modifications to the physical experiment.
                   </p>
                   <p class="experience-detail">
-                    Over the following year, I advanced to both the Mission Team Lead & Data Acquisition and Analyst Lead. I became 
-                    proficient in using the SLICE Micro system from DTS for data collection and developed and improved current <strong>MATLAB</strong> scripts
+                    Over the following year, I advanced to both Mission Team Lead and Data Acquisition & Analyst Lead. I became
+                    proficient in using the SLICE Micro system from DTS for data collection and developed and improved existing <strong>MATLAB</strong> scripts
                     to generate frequency response functions from modal data.
                   </p>
                   </div>
@@ -585,7 +608,7 @@
                   <p class="experience-detail">
                     I played a key role in designing the payload from scratch, sourcing parts, and leading the assembly process. 
                     Additionally, my team and I were responsible for creating essential documentation for future students to continue the project.
-                    This included, but not limited to, a concept of operations, testing procedure documents, a detailed integration plan, and a bill of materials.
+                    This included, but was not limited to, a concept of operations, testing procedure documents, a detailed integration plan, and a bill of materials.
                   </p>
                   <p class="experience-detail">
                      The experiment focused on fluid dynamics inside both spherical and cylindrical propellant tanks in microgravity. 
@@ -606,7 +629,7 @@
                 <!-- Left Column -->
                 <div class="col-md-6">
                   <div class="text-center">
-                    <img src="assets/img/MaSC.jpg" class="img-fluid rounded b-shadow-a mb-3 masc-img" alt="Working photo of my team and I on a parabolic flight with MaSC" loading="lazy">
+                    <img src="assets/img/MaSC.jpg" class="img-fluid rounded b-shadow-a mb-3 masc-img" alt="Working photo of my team and me on a parabolic flight with MaSC" loading="lazy">
                   </div>
                   <h3 class="experience-title">Mission Team Lead, Lead Mechanical Engineer</h3>
                   <hr class="section-line">
@@ -626,13 +649,13 @@
                   <p class="experience-subtitle"><strong>9/2018–5/2021</strong></p>
                   <p class="experience-detail">
                     MaSC is a collaborative effort between Carthage College and Embry-Riddle Aeronautical University aimed at 
-                    suppressing slosh in propellant tanks in low-gravity environments. The experiment utilizes Helmholtz Coils and 
+                    suppressing slosh in propellant tanks in low-gravity environments. The experiment utilizes Helmholtz coils and
                     a metallic alloy membrane inside the tank to influence fluid movement.
                   </p>
                   <p class="experience-detail">
                     This experiment was integrated into an existing payload from a previous iteration of MPG. My primary 
                     responsibilities included designing, fabricating, and testing new cylindrical polycarbonate tanks, ensuring space for the
-                    metallic membrane. Additionally, I used <strong>Autodesk inventor</strong> to contribute to the design and structural support of the Helmholtz coil mounts.
+                    metallic membrane. Additionally, I used <strong>Autodesk Inventor</strong> to contribute to the design and structural support of the Helmholtz coil mounts.
                   </p>
                   </div>
                 
@@ -655,9 +678,6 @@
               <h2 class="title-a">
                 Awards & Honors
               </h2>
-              <p class="subtitle-a">
-                Some images have links to press releases. 
-              </p>
               <hr class="line-mf">
               </div>
             </div>
@@ -675,15 +695,14 @@
             <div class="col-md-3">
               <div class="award-box text-center">
                 <div class="award-icon">
-                  <a href="https://mae.ucf.edu/mae-boasts-3-national-science-foundation-graduate-research-fellows/">
                   <img src="assets/img/NSF.PNG" class="img-fluid rounded b-shadow-a" alt="NSF Graduate Research Fellowship" loading="lazy">
-                  </a>
                 </div>
                 <div class="award-content">
                   <h4 class="award-title">NSF Graduate Research Fellowship</h4>
                   <p class="award-description">
                     Awarded this prestigious fellowship to fund my graduate research on cryogenic chilldown in microgravity.
                   </p>
+                  <a href="https://mae.ucf.edu/mae-boasts-3-national-science-foundation-graduate-research-fellows/" class="btn-link award-link">Read the announcement &rarr;</a>
                 </div>
               </div>
             </div>
@@ -692,15 +711,14 @@
             <div class="col-md-3">
               <div class="award-box text-center">
                 <div class="award-icon">
-                  <a href="https://www.issnationallab.org/james-abrahamson-fellowship-recipients/">
                   <img src="assets/img/ISSNL_Logo_Black_DigitalQuality.png" class="img-fluid rounded b-shadow-a invert-dark" alt="ISS National Lab Fellowship" loading="lazy">
-                  </a>
                 </div>
                 <div class="award-content">
                   <h4 class="award-title">ISS National Lab Space Leader Fellowship</h4>
                   <p class="award-description">
                     Selected as one of three recipients nationwide for this year-long fellowship from the ISS National Lab and CASIS, supporting early-stage graduate researchers pursuing space-related work.
                   </p>
+                  <a href="https://www.issnationallab.org/james-abrahamson-fellowship-recipients/" class="btn-link award-link">Read the announcement &rarr;</a>
                 </div>
               </div>
             </div>
@@ -724,15 +742,14 @@
             <div class="col-md-3">
               <div class="award-box text-center">
                 <div class="award-icon">
-                  <a href="https://www.carthage.edu/live/news/30659-wisconsin-space-grant-consortium-awards-carthage">
                   <img src="assets/img/wsgc-logo.png" class="img-fluid rounded b-shadow-a invert-dark" alt="Wisconsin Space Grant Consortium Undergraduate Scholar" loading="lazy">
-                  </a>
                 </div>
                 <div class="award-content">
                   <h4 class="award-title">WSGC Undergraduate Scholar</h4>
                   <p class="award-description">
-                    Awarded for the 2020-2021 academic year in recognition of excellence in STEM.
+                    Awarded for the 2020–2021 academic year in recognition of excellence in STEM.
                   </p>
+                  <a href="https://www.carthage.edu/live/news/30659-wisconsin-space-grant-consortium-awards-carthage" class="btn-link award-link">Read the announcement &rarr;</a>
                 </div>
               </div>
             </div>
@@ -749,7 +766,7 @@
             <div class="col-md-3">
               <div class="award-box text-center">
                 <div class="award-icon">
-                  <img src="assets/img/20TWENTIES_nominee_badge[3].png" class="img-fluid rounded b-shadow-a" alt="20 Twenties Award Nominee" loading="lazy">
+                  <img src="assets/img/20twenties_nominee.png" class="img-fluid rounded b-shadow-a" alt="20 Twenties Award Nominee" loading="lazy">
                 </div>
                 <div class="award-content">
                   <h4 class="award-title">20 Twenties Award Nominee</h4>
@@ -764,20 +781,19 @@
             <div class="col-md-3">
               <div class="award-box text-center">
                 <div class="award-icon">
-                  <a href="https://lemelson.mit.edu/award-winners/celestine-ananda-bennett-bartel-nicholas-bartel-cassandra-bossong-and-taylor-peterson">
                   <img src="assets/img/lemelson-mit.png" class="img-fluid rounded b-shadow-a" alt="Lemelson-MIT Student Prize" loading="lazy">
-                  </a>
                 </div>
                 <div class="award-content">
                   <h4 class="award-title">Lemelson-MIT Student Prize</h4>
                   <p class="award-description">
                     My team and I won this prestigious prize for our Modal Propellant Gauging (MPG) technology, competing against top schools like Johns Hopkins and MIT among over 200 applicants nationwide.
                   </p>
+                  <a href="https://lemelson.mit.edu/award-winners/celestine-ananda-bennett-bartel-nicholas-bartel-cassandra-bossong-and-taylor-peterson" class="btn-link award-link">Read the announcement &rarr;</a>
                 </div>
               </div>
             </div>
 
-            <!-- Signma Pi Sigma Inductee -->
+            <!-- Sigma Pi Sigma Inductee -->
             <div class="col-md-3">
               <div class="award-box text-center">
                 <div class="award-icon">
@@ -824,7 +840,7 @@
                 <div class="award-content">
                   <h4 class="award-title">Society of Physics Students Chapter President</h4>
                   <p class="award-description">
-                    Served as the 2020-2021 chapter president, leading the group to earn the Outstanding Chapter Award for fostering an active, inclusive community.
+                    Served as the 2020–2021 chapter president, leading the group to earn the Outstanding Chapter Award for fostering an active, inclusive community.
                   </p>
                 </div>
               </div>
@@ -839,7 +855,7 @@
                 <div class="award-content">
                   <h4 class="award-title">Student Ambassador</h4>
                   <p class="award-description">
-                    Selected as the 2020-2021 Student Ambassador for WSGC at Carthage College, recruiting and mentoring students pursuing STEM careers.
+                    Selected as the 2020–2021 Student Ambassador for WSGC at Carthage College, recruiting and mentoring students pursuing STEM careers.
                   </p>
                 </div>
               </div>
@@ -881,7 +897,7 @@
                 Featured Research
               </h2>
               <p class="subtitle-a">
-                Peer-reviewed papers and conference proceedings from my graduate and undergraduate research.
+                Conference papers and proceedings from my graduate and undergraduate research.
               </p>
               <hr class="line-mf">
             </div>
@@ -896,9 +912,9 @@
             <div class="col-md-4 mb-4">
               <div class="featured-box">
                 <div class="featured-icon">
-                  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
                 </div>
-                <h4 class="featured-title">ASME FEDSM 2022</h4>
+                <h3 class="featured-title">ASME FEDSM 2022</h3>
                 <p class="featured-description">
                   Conference paper presented at the ASME Fluids Engineering Division Summer Meeting, based on CFD research conducted at UCF's Computational Fluids and Aerodynamics Lab under NASA's TechFlight award.
                 </p>
@@ -910,9 +926,9 @@
             <div class="col-md-4 mb-4">
               <div class="featured-box">
                 <div class="featured-icon">
-                  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
                 </div>
-                <h4 class="featured-title">MPG-BOP Proceedings Papers</h4>
+                <h3 class="featured-title">MPG-BOP Proceedings Papers</h3>
                 <p class="featured-description">
                   Wisconsin Space Grant Consortium proceedings papers (2018 and 2019) on the design and flight results of the MPG payload flown aboard Blue Origin's New Shepard.
                 </p>
@@ -924,9 +940,9 @@
             <div class="col-md-4 mb-4">
               <div class="featured-box">
                 <div class="featured-icon">
-                  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
                 </div>
-                <h4 class="featured-title">MPG-ISS Abstract and Paper</h4>
+                <h3 class="featured-title">MPG-ISS Abstract and Paper</h3>
                 <p class="featured-description">
                   NASA Kennedy Space Center OSTEM internship abstract and paper on propellant fill-level sensing technology developed for use in microgravity environments.
                 </p>
@@ -965,9 +981,9 @@
             <!-- CFD & Simulation -->
             <div class="skill-accordion-item">
               <button class="skill-accordion-header" type="button" data-toggle="collapse" data-target="#skillCFD" aria-expanded="true" aria-controls="skillCFD">
-                <span class="skill-accordion-icon"><i class="fa fa-cogs" aria-hidden="true"></i></span>
+                <span class="skill-accordion-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
                 <span class="skill-accordion-title">CFD & Simulation</span>
-                <span class="skill-accordion-chevron"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                <span class="skill-accordion-chevron"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
               </button>
               <div id="skillCFD" class="collapse show" data-parent="#skillsAccordion">
                 <div class="skill-tags">
@@ -987,16 +1003,16 @@
             <!-- CAD & Design -->
             <div class="skill-accordion-item">
               <button class="skill-accordion-header collapsed" type="button" data-toggle="collapse" data-target="#skillCAD" aria-expanded="false" aria-controls="skillCAD">
-                <span class="skill-accordion-icon"><i class="fa fa-cube" aria-hidden="true"></i></span>
+                <span class="skill-accordion-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg></span>
                 <span class="skill-accordion-title">CAD & Design</span>
-                <span class="skill-accordion-chevron"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                <span class="skill-accordion-chevron"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
               </button>
               <div id="skillCAD" class="collapse" data-parent="#skillsAccordion">
                 <div class="skill-tags">
                   <span class="skill-tag">Autodesk Inventor</span>
                   <span class="skill-tag">SolidWorks</span>
                   <span class="skill-tag">Creo View</span>
-                  <span class="skill-tag">Spaceclaim</span>
+                  <span class="skill-tag">SpaceClaim</span>
                   <span class="skill-tag">DesignModeler</span>
                   <span class="skill-tag">Autodesk Fusion 360</span>
                   <span class="skill-tag">Cura</span>
@@ -1007,9 +1023,9 @@
             <!-- Programming & Data Analysis -->
             <div class="skill-accordion-item">
               <button class="skill-accordion-header collapsed" type="button" data-toggle="collapse" data-target="#skillProgramming" aria-expanded="false" aria-controls="skillProgramming">
-                <span class="skill-accordion-icon"><i class="fa fa-calculator" aria-hidden="true"></i></span>
+                <span class="skill-accordion-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01M16 14v4"/></svg></span>
                 <span class="skill-accordion-title">Programming & Data Analysis</span>
-                <span class="skill-accordion-chevron"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                <span class="skill-accordion-chevron"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
               </button>
               <div id="skillProgramming" class="collapse" data-parent="#skillsAccordion">
                 <div class="skill-tags">
@@ -1027,9 +1043,9 @@
             <!-- Hardware & Fabrication -->
             <div class="skill-accordion-item">
               <button class="skill-accordion-header collapsed" type="button" data-toggle="collapse" data-target="#skillHardware" aria-expanded="false" aria-controls="skillHardware">
-                <span class="skill-accordion-icon"><i class="fa fa-wrench" aria-hidden="true"></i></span>
+                <span class="skill-accordion-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
                 <span class="skill-accordion-title">Hardware & Fabrication</span>
-                <span class="skill-accordion-chevron"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                <span class="skill-accordion-chevron"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
               </button>
               <div id="skillHardware" class="collapse" data-parent="#skillsAccordion">
                 <div class="skill-tags">
@@ -1044,9 +1060,9 @@
             <!-- Project & Team Leadership -->
             <div class="skill-accordion-item">
               <button class="skill-accordion-header collapsed" type="button" data-toggle="collapse" data-target="#skillLeadership" aria-expanded="false" aria-controls="skillLeadership">
-                <span class="skill-accordion-icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                <span class="skill-accordion-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
                 <span class="skill-accordion-title">Project & Team Leadership</span>
-                <span class="skill-accordion-chevron"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                <span class="skill-accordion-chevron"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
               </button>
               <div id="skillLeadership" class="collapse" data-parent="#skillsAccordion">
                 <div class="skill-tags">
@@ -1081,10 +1097,10 @@
               <hr class="section-line">
               <p class="subtitle-a">Feel free to reach out if you would like to connect or learn more about my experiences.</p>
               <ul class="list-unstyled contact-info-inline">
-                <li><i class="icon ion-email"></i> taylor.peterson2399@gmail.com</li>
+                <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg> taylor.peterson2399@gmail.com</li>
                 <li>
                   <a href="https://www.linkedin.com/in/tpeterson5/" target="_blank">
-                    <i class="icon-linkedin"></i> Connect on LinkedIn
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> Connect on LinkedIn
                   </a>
                 </li>
               </ul>
@@ -1148,14 +1164,8 @@
   
   <!-- End  Footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <a href="#" class="back-to-top" aria-label="Back to top"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg></a>
   <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

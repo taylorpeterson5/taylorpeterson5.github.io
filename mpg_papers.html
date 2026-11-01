@@ -58,8 +58,8 @@
   </script>
 
   <!-- Favicons -->
-  <link href="assets/img/Website Icon.jpg" rel="icon">
-  <link href="assets/img/Website Icon.jpg" rel="apple-touch-icon">
+  <link href="assets/img/Website%20Icon.jpg" rel="icon">
+  <link href="assets/img/Website%20Icon.jpg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,8 +68,6 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -127,7 +125,8 @@
           </li>
           <li class="nav-item">
             <button class="theme-toggle-btn nav-link" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
-              <i class="fa fa-moon-o" aria-hidden="true"></i>
+              <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
             </button>
           </li>
         </ul>
@@ -164,9 +163,9 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h5 class="title-a">
+              <h3 class="title-a">
                 2019
-              </h5>
+              </h3>
               <hr class="line-mf">
             </div>
           </div>
@@ -174,11 +173,11 @@
 
         <div class="text-center mb-4">
           <a href="/assets/pdf/mpg_paper.pdf" download="MPG-BOP_2019_Paper.pdf" class="button button-a">
-            <i class="fa fa-download" aria-hidden="true"></i> Download 2019 Paper (PDF)
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Download 2019 Paper (PDF)
           </a>
         </div>
 
-          <iframe src="/assets/pdf/mpg_paper.pdf" width="100%" height="800px"> </iframe> <!-- This is the 2019 paper -->
+          <iframe src="/assets/pdf/mpg_paper.pdf" class="pdf-frame" title="MPG-BOP 2019 paper (PDF)"></iframe> <!-- This is the 2019 paper -->
 
          <!-- <div class="portfolio-info">
             <h3>Project information</h3>
@@ -190,9 +189,6 @@
             </ul>
           </div>-->
 
-        </div>
-
-
       </div>
     </section><!-- End 2019 Paper -->
   
@@ -203,9 +199,9 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h5 class="title-a">
+              <h3 class="title-a">
                 2018
-              </h5>
+              </h3>
               <hr class="line-mf">
             </div>
           </div>
@@ -213,14 +209,11 @@
 
         <div class="text-center mb-4">
           <a href="/assets/pdf/WSGC_Final_Report__MPG_BOP.pdf" download="MPG-BOP_2018_Paper.pdf" class="button button-a">
-            <i class="fa fa-download" aria-hidden="true"></i> Download 2018 Paper (PDF)
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Download 2018 Paper (PDF)
           </a>
         </div>
 
-          <iframe src="/assets/pdf/WSGC_Final_Report__MPG_BOP.pdf" width="100%" height="800px"> </iframe>
-        </div>
-
-
+          <iframe src="/assets/pdf/WSGC_Final_Report__MPG_BOP.pdf" class="pdf-frame" title="MPG-BOP 2018 paper (PDF)"></iframe>
       </div>
     </section>
 
@@ -248,14 +241,8 @@
     </div>
   </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <a href="#" class="back-to-top" aria-label="Back to top"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg></a>
   <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

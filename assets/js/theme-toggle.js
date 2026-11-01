@@ -1,10 +1,7 @@
 (function () {
   function applyState(theme) {
+    // The moon/sun icon swap is handled in CSS from the data-theme attribute.
     document.querySelectorAll('.theme-toggle-btn').forEach(function (btn) {
-      var icon = btn.querySelector('i');
-      if (icon) {
-        icon.className = theme === 'dark' ? 'fa fa-sun-o' : 'fa fa-moon-o';
-      }
       btn.setAttribute('aria-pressed', theme === 'dark');
       btn.setAttribute('title', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
     });

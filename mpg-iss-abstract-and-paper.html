@@ -37,8 +37,8 @@
   </script>
 
   <!-- Favicons -->
-  <link href="assets/img/Website Icon.jpg" rel="icon">
-  <link href="assets/img/Website Icon.jpg" rel="apple-touch-icon">
+  <link href="assets/img/Website%20Icon.jpg" rel="icon">
+  <link href="assets/img/Website%20Icon.jpg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,8 +47,6 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -106,7 +104,8 @@
           </li>
           <li class="nav-item">
             <button class="theme-toggle-btn nav-link" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
-              <i class="fa fa-moon-o" aria-hidden="true"></i>
+              <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
             </button>
           </li>
         </ul>
@@ -142,14 +141,11 @@
 
         <div class="text-center mb-4">
           <a href="/assets/pdf/mpg-iss-abstract.pdf" download="MPG-ISS_Abstract.pdf" class="button button-a">
-            <i class="fa fa-download" aria-hidden="true"></i> Download Abstract (PDF)
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Download Abstract (PDF)
           </a>
         </div>
 
-          <iframe src="/assets/pdf/mpg-iss-abstract.pdf" width="100%" height="800px"> </iframe>
-
-        </div>
-
+          <iframe src="/assets/pdf/mpg-iss-abstract.pdf" class="pdf-frame" title="MPG-ISS abstract (PDF)"></iframe>
 
       </div>
     </section><!-- End Portfolio Details Section -->
@@ -159,14 +155,11 @@
 
         <div class="text-center mb-4">
           <a href="/assets/pdf/mpg-iss-paper.pdf" download="MPG-ISS_Paper.pdf" class="button button-a">
-            <i class="fa fa-download" aria-hidden="true"></i> Download Paper (PDF)
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Download Paper (PDF)
           </a>
         </div>
 
-          <iframe src="/assets/pdf/mpg-iss-paper.pdf" width="100%" height="800px"> </iframe>
-
-        </div>
-
+          <iframe src="/assets/pdf/mpg-iss-paper.pdf" class="pdf-frame" title="MPG-ISS paper (PDF)"></iframe>
 
       </div>
     </section>
@@ -195,14 +188,8 @@
     </div>
   </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <a href="#" class="back-to-top" aria-label="Back to top"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg></a>
   <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

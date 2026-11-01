@@ -142,6 +142,12 @@ h6,
   bottom: 46px;
 }
 
+/* ======= Embedded PDFs (resume and paper pages) ======= */
+.pdf-frame {
+  width: 100%;
+  height: 800px;
+}
+
 /* ====== Awards Section ======= */
 
 hr.line-mf {
@@ -203,6 +209,18 @@ hr.line-mf {
   color: #555;
   line-height: 1.5;
   margin: 0 10px; /* Adds some padding for better readability */
+}
+
+.award-content {
+  flex: 1; /* Fills the card so the announcement link can sit at the bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+.award-link {
+  margin-top: auto; /* Lines up the links across a row regardless of description length */
+  padding-top: 10px;
+  align-self: center;
 }
 
 /* ====== Experience Section ====== */
@@ -321,6 +339,60 @@ hr.line-mf {
   color: #555;
   line-height: 1.5;
   margin-bottom: 1rem;
+}
+
+/* ====== Highlights Strip ====== */
+
+.stats-strip {
+  background-color: #050505; /* Continues the black fade at the bottom of the hero */
+  padding: 2rem 0;
+}
+
+.stats-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.stat {
+  padding: 0 0.75rem;
+}
+
+.stat-value {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.9rem;
+  line-height: 1.1;
+  color: #c48fdc; /* Lighter brand purple; #8E44AD is too dark to read on black */
+}
+
+.stat-label {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+@media (min-width: 768px) {
+  .stats-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stat + .stat {
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+  }
 }
 
 /* ====== Scroll Reveal ====== */
@@ -724,23 +796,29 @@ a:hover {
 /*------/ Back to top button /------*/
 .back-to-top {
   position: fixed;
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #8E44AD;
   color: #fff;
   width: 44px;
   height: 44px;
-  text-align: center;
-  line-height: 1;
   font-size: 16px;
   border-radius: 50%;
   right: 15px;
   bottom: 15px;
-  transition: background 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  transition: background 0.5s, opacity 0.6s, visibility 0.6s;
   z-index: 11;
 }
 
-.back-to-top i {
-  padding-top: 12px;
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top .icon {
   color: #fff;
 }
 
@@ -760,6 +838,11 @@ a:hover {
   z-index: 9999;
   overflow: hidden;
   background: #fff;
+  transition: opacity 0.6s ease;
+}
+
+#preloader.is-hidden {
+  opacity: 0;
 }
 
 #preloader:before {
@@ -1140,6 +1223,16 @@ a:hover {
 
 .intro .text-slider-items {
   display: none;
+}
+
+.intro .typed-cursor {
+  animation: typed-cursor-blink 0.7s infinite;
+}
+
+@keyframes typed-cursor-blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .intro-single {
@@ -1867,6 +1960,40 @@ footer .credits a {
 
 .theme-toggle-btn:focus {
   outline: none;
+}
+
+/* Both icons are in the markup; show the one for the theme you'd switch to. */
+.theme-toggle-btn .icon-sun,
+[data-theme="dark"] .theme-toggle-btn .icon-moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle-btn .icon-sun {
+  display: inline-block;
+}
+
+/*--------------------------------------------------------------
+# Icons (inline SVG; shapes based on Feather Icons, MIT License)
+--------------------------------------------------------------*/
+.icon {
+  display: inline-block;
+  width: 1em; /* Sized by the surrounding font-size, like the old icon font */
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Chevrons stand alone, so they get the heavier weight of the old icon font. */
+.intro .intro-scroll-down .icon,
+.skill-accordion-chevron .icon,
+.back-to-top .icon {
+  width: 1.3em;
+  height: 1.3em;
+  stroke-width: 3;
 }
 
 /*--------------------------------------------------------------

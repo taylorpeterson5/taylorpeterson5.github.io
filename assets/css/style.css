@@ -388,10 +388,157 @@ hr.line-mf {
 
   .stat + .stat {
     border-left: 1px solid rgba(255, 255, 255, 0.12);
+    transition: border-color 0.3s ease;
   }
 
   .stat-value {
     font-size: 2.5rem;
+  }
+}
+
+/* ====== Zero-G Mode ====== */
+
+.zero-g-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.6rem;
+  padding: 3px 12px;
+  border: 1px solid rgba(196, 143, 220, 0.5);
+  border-radius: 20px;
+  background: transparent;
+  color: #c48fdc;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.zero-g-trigger:hover,
+.zero-g-trigger:focus-visible {
+  background-color: rgba(196, 143, 220, 0.15);
+}
+
+.zero-g-trigger[hidden] {
+  display: none; /* Shown by zero-g.js, so it never appears without the script or with reduced motion */
+}
+
+/* Cards normally stack on top of each other; flatten that so floating pieces can drift over them. */
+html.zero-g .box-shadow-full,
+html.zero-g .intro .intro-content {
+  z-index: auto;
+}
+
+/* Pieces drifting past the screen edge must not widen the page (phones would zoom out). */
+html.zero-g,
+html.zero-g body {
+  overflow-x: clip;
+}
+
+html.zero-g body {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* The stat dividers would otherwise float off as stray lines. */
+html.zero-g .stat + .stat {
+  border-left-color: transparent;
+}
+
+/* Out of the way of the g-meter on phones; it can't be used mid-flight anyway. */
+html.zero-g .back-to-top {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.zero-g-piece {
+  cursor: grab;
+  touch-action: none;
+}
+
+.zero-g-piece.is-dragging {
+  cursor: grabbing;
+}
+
+.zero-g-hud {
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  max-width: calc(100% - 30px);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(10, 10, 10, 0.88);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  color: #f2f2f2;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.zero-g-hud.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.zero-g-meter {
+  min-width: 3.4em;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #c48fdc;
+}
+
+.zero-g-unit {
+  margin-left: 2px;
+  font-size: 0.9rem;
+}
+
+.zero-g-phase {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.zero-g-restore {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 5px;
+  background: #8E44AD;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.zero-g-restore:hover {
+  background: #74378f;
+}
+
+@media (max-width: 575px) {
+  .zero-g-hud {
+    gap: 8px;
+    padding: 8px 10px;
+  }
+
+  .zero-g-meter {
+    min-width: 2.8em;
+    font-size: 1.3rem;
+  }
+
+  .zero-g-phase {
+    font-size: 0.65rem;
   }
 }
 

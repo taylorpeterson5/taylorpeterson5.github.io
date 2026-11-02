@@ -1,4 +1,6 @@
-# Full-size source video; over GitHub's 100 MB file limit. The site uses the compressed thesis_NS_results.mp4.
-assets/vid/thesis_NS_results_original.mp4
+# full size videos
+assets/*/*_original.*
+*.wmv
 
+# VS code folder
 .vscode/

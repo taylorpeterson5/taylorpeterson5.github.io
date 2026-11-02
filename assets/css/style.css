@@ -169,6 +169,97 @@ h6,
   margin-top: 0.5rem;
 }
 
+/* ======= Sub-projects (several projects inside one experience card) ======= */
+.subproject {
+  border-left: 3px solid #8E44AD;
+  padding-left: 1rem;
+  margin: 1.25rem 0;
+}
+
+.subproject-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.subproject-meta {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.4rem;
+}
+
+/* ======= Project page (mpg.html) ======= */
+.project-section {
+  scroll-margin-top: 80px; /* Keeps the fixed navbar from covering a section's title when jumped to */
+}
+
+.project-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-nav a {
+  padding: 0.4rem 1rem;
+  border: 1px solid #8E44AD;
+  border-radius: 2rem;
+  color: #8E44AD;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-nav a:hover {
+  background-color: #8E44AD;
+  color: #fff;
+}
+
+/* One row of equal-height photos: each figure's width is proportional to its
+   image's aspect ratio, set inline as --ar (width / height). */
+.project-gallery {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-gallery > figure {
+  flex: var(--ar, 1) 1 0;
+  min-width: 0;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .project-gallery {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.project-figure {
+  margin: 0;
+}
+
+.project-patch {
+  max-width: 280px;
+  margin: 1rem auto 0;
+}
+
+.project-gallery img,
+.project-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+.project-gallery figcaption,
+.project-figure figcaption {
+  margin-top: 0.5rem;
+}
+
 /* ======= Embedded PDFs (resume and paper pages) ======= */
 .pdf-frame {
   width: 100%;
@@ -1428,6 +1519,13 @@ a:hover {
   }
 }
 
+/* Long single words (e.g. MICROGRAVITY) would otherwise run off a phone screen */
+@media (max-width: 575.98px) {
+  .intro-single .intro-title {
+    font-size: 2.25rem;
+  }
+}
+
 .intro-single .breadcrumb {
   background-color: transparent;
   color: #8E44AD;
@@ -2230,8 +2328,25 @@ footer .credits a {
 [data-theme="dark"] .title-s,
 [data-theme="dark"] .award-group-title,
 [data-theme="dark"] .experience-subtitle,
-[data-theme="dark"] .experience-title {
+[data-theme="dark"] .experience-title,
+[data-theme="dark"] .subproject-title,
+[data-theme="dark"] .subproject-meta {
   color: #f2f2f2;
+}
+
+[data-theme="dark"] .subproject {
+  border-left-color: #c48fdc;
+}
+
+[data-theme="dark"] .project-nav a {
+  border-color: #c48fdc;
+  color: #c48fdc;
+}
+
+[data-theme="dark"] .project-nav a:hover {
+  background-color: #8E44AD;
+  border-color: #8E44AD;
+  color: #fff;
 }
 
 [data-theme="dark"] .subtitle,

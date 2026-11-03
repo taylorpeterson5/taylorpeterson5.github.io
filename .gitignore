@@ -4,3 +4,6 @@ assets/*/*_original.*
 
 # VS code folder
 .vscode/
+
+# Unity game projects (source, Library cache, Windows builds); the site hosts only the WebGL builds under games/
+assets/video-games/

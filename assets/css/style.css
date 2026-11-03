@@ -260,6 +260,156 @@ h6,
   margin-top: 0.5rem;
 }
 
+/* ======= Side project banner (homepage, links to games.html) ======= */
+/* The gap above the banner is the section's padding instead of the Skills card's bottom margin, so the Games
+   nav link (which scrolls a section's top to just under the navbar) leaves room above the card */
+#games {
+  margin-top: -3rem;
+  padding-top: 3rem;
+}
+
+.side-project {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.side-project-thumb {
+  flex: 0 0 auto;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  object-position: 50% 86%; /* The square of the screenshot with the enemy ships */
+  border-radius: 0.25rem;
+}
+
+.side-project-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.side-project-eyebrow {
+  margin-bottom: 0.25rem;
+  color: #8E44AD;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.side-project-title {
+  margin-bottom: 0.25rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.side-project-detail {
+  margin-bottom: 0;
+}
+
+.side-project-button {
+  flex: 0 0 auto;
+  padding: 0.6rem 1.6rem;
+  font-weight: 700;
+}
+
+@media (max-width: 575.98px) {
+  .side-project {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ======= Games page (games.html) ======= */
+/* The games are portrait (9:16), so the frame also fits the screen height to keep the whole game in view */
+.game-frame {
+  width: min(100%, calc((100vh - 100px) * 9 / 16));
+  margin: 0 auto;
+}
+
+/* Beside the text, the game's column is only as wide as the game, so the cap leaves the text column room */
+@media (min-width: 992px) {
+  .game-frame {
+    width: min(490px, calc((100vh - 100px) * 9 / 16));
+  }
+}
+
+@media (min-width: 1200px) {
+  .game-frame {
+    width: min(590px, calc((100vh - 100px) * 9 / 16));
+  }
+}
+
+.game-frame iframe,
+.game-start {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border: 0;
+  border-radius: 0.25rem;
+  background-color: #000;
+}
+
+.game-start {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.game-start img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.game-start:hover img,
+.game-start:focus-visible img {
+  opacity: 1;
+}
+
+.game-start-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.6rem 1.6rem;
+  border-radius: 2rem;
+  background-color: #8E44AD;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.game-touch-note {
+  display: none;
+  margin-top: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Touch-only devices have no keyboard to play with, so they get the screenshot and a note instead of the Play button */
+@media (hover: none) and (pointer: coarse) {
+  .game-start {
+    pointer-events: none;
+  }
+
+  .game-start img {
+    opacity: 1;
+  }
+
+  .game-start-label {
+    display: none;
+  }
+
+  .game-touch-note {
+    display: block;
+  }
+}
+
 /* ======= Embedded PDFs (resume and paper pages) ======= */
 .pdf-frame {
   width: 100%;
@@ -372,56 +522,58 @@ hr.line-mf {
   text-decoration: underline; /* Adds underline on hover */
 }
 
+/* Image size caps. min(100%, ...) keeps img-fluid's fit-the-column limit, which a plain px max-width
+   would replace, so the images still shrink to fit a phone */
 .zero-g-img-first {
-  max-width: 135px; /* Sets a maximum width */
+  max-width: min(100%, 135px); /* Sets a maximum width */
   height: auto; /* Maintains aspect ratio */
   margin: 0 auto; /* Centers the image */
 }
 
 .zero-g-img-second {
-  max-width: 450px; /* Adjust to desired size for the second image */
+  max-width: min(100%, 450px); /* Adjust to desired size for the second image */
   height: auto; /* Maintain aspect ratio */
   margin: 0 auto;
 }
 
 .nasa-img {
-  max-width: 350px; /* Adjust image size */
+  max-width: min(100%, 350px); /* Adjust image size */
   height: auto;
 }
 
 .blue-origin-img {
-  max-width: 260px;
+  max-width: min(100%, 260px);
   height: auto;
 }
 
 .ns-capsule-img {
-  max-width: 400px;
+  max-width: min(100%, 400px);
   height: auto;
 }
 
 .blue-origin-img-small {
-  max-width: 260px;
+  max-width: min(100%, 260px);
   height: auto;
 }
 
 .bop-img {
-  max-width: 400px; /* Adjust image size */
+  max-width: min(100%, 400px); /* Adjust image size */
   height: auto;
 }
 
 .proto-img {
-  max-width: 400px;
+  max-width: min(100%, 400px);
   height: auto;
 }
 
 .proto-badge {
-  max-width: 300px;
+  max-width: min(100%, 300px);
   height: auto;
   margin-top: 10px;
 }
 
 .masc-img {
-  max-width: 400px;
+  max-width: min(100%, 400px);
   height: auto;
 }
 
@@ -737,6 +889,12 @@ html.zero-g .back-to-top {
   flex-wrap: wrap;
   gap: 8px;
   padding: 4px 4px 18px 61px;
+}
+
+.skill-link {
+  margin: -6px 0 0;
+  padding: 0 4px 18px 61px; /* Lines up with the tags above */
+  font-weight: 600;
 }
 
 .skill-tag {
@@ -1211,7 +1369,7 @@ a:hover {
   padding-left: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .navbar-b.navbar-trans .nav-item, .navbar-b.navbar-reduce .nav-item {
     padding-left: 10px;
   }
@@ -1234,7 +1392,7 @@ a:hover {
   transition: all 500ms ease;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .navbar-b.navbar-trans .nav-link:before, .navbar-b.navbar-reduce .nav-link:before {
     margin-left: 18px;
   }
@@ -2330,8 +2488,13 @@ footer .credits a {
 [data-theme="dark"] .experience-subtitle,
 [data-theme="dark"] .experience-title,
 [data-theme="dark"] .subproject-title,
-[data-theme="dark"] .subproject-meta {
+[data-theme="dark"] .subproject-meta,
+[data-theme="dark"] .side-project-title {
   color: #f2f2f2;
+}
+
+[data-theme="dark"] .side-project-eyebrow {
+  color: #c48fdc;
 }
 
 [data-theme="dark"] .subproject {

@@ -110,11 +110,13 @@
     });
   });
 
-  // Scroll to sections on load with hash links
+  // Scroll to sections on load with hash links, once the page's images and fonts have settled its layout
   if (window.location.hash) {
     var initialTarget = document.getElementById(window.location.hash.slice(1));
     if (initialTarget) {
-      scrollToTarget(initialTarget);
+      window.addEventListener('load', function() {
+        scrollToTarget(initialTarget);
+      });
     }
   }
 
